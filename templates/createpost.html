@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+
+</head>
+
+<body>
+<div class='container'>
+<div class="container my-4">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/1200x400/?mobile"class="d-block w-100" alt="...">
+    </div>
+</div>    
+<h1>Contact us  </h1>
+<form action="" method="POST">
+{% csrf_token %}
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" name="title" aria-describedby="title">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your concern or feedback with anyone else.</small>
+</div>
+
+<div class="form-group">
+    <label for="exampleInputPassword1">content</label>
+    <input type="text" class="form-control" name="content">
+</div>
+
+<input type="submit" value="Post"/>
+
+</form>
+</body>
+</html>
+{% endblock %}
